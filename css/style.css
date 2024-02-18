@@ -2,17 +2,26 @@
 <weight>: Use a value from 100 to 900 */
 :root {
     color-scheme: dark;
+    --title: clamp(1.6667rem, 1.3596rem + 1.156vi, 2.4rem);
+    --general-text: 1.125rem;
 }
 
+html {
+    height: 100%;
+}
 body {
     margin: 0;
     width: 100%;
+    height: 100%;
+    background-image: radial-gradient(circle at bottom left, #2d2d2d, #4c3062b0, #2d2d2d);
     font-family: "Montserrat", sans-serif;
-    font-optical-sizing: auto;
-    font-weight: 300;
-    font-style: normal;
+    font-size: 16px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
+/* -------------Navbar------------- */
 header {
     width: 100%;
     background: linear-gradient(to bottom left, #9834d433, #d9d9d900);
@@ -21,9 +30,10 @@ header {
 }
 
 nav {
-    width: 50%;
+    width: 100%;
     height: 120px;
     padding-inline: 50px;
+    font-weight: 300;
     display: flex;
     justify-content: flex-end;
     align-items: center;
@@ -44,3 +54,71 @@ a svg {
     width: 2rem;
     height: 2rem;
 }
+
+/* ------/------Navbar------/------ */
+
+/* -------------Main------------- */
+
+main {
+    width: 80%;
+    height: 100%;
+    display: flex;
+}
+
+/* ------/------Main------/------ */
+
+/* -------------Bio------------- */
+
+.bio {
+    width: 50%;
+    height: 30%;
+    display: flex;
+    flex-direction: column;
+}
+
+.bio-title {
+    font-size: var(--title);
+    font-weight: 500;
+}
+
+.bio-title h1 {
+    margin-block: 3rem;
+}
+
+.bio-text {
+    width: 80%;
+    font-size: var(--general-text);
+    font-weight: 200;
+    line-height: 1.575rem;
+    letter-spacing: -3%;
+}
+
+/* ------/------Bio------/------ */
+
+/* -------------Responsive------------- */
+
+@media (max-width: 425px) {
+    main {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav {
+        justify-content: space-around;
+        gap: 10px;
+    }
+
+    .bio {
+        width: 90%;
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .bio-text {
+        width: 100%;
+    }
+}
+/* ------/------Responsive------/------ */
