@@ -60,9 +60,10 @@ a svg {
 /* -------------Main------------- */
 
 main {
-    width: 80%;
+    width: 85%;
     height: 100%;
     display: flex;
+    flex-direction: column;
 }
 
 /* ------/------Main------/------ */
@@ -86,7 +87,7 @@ main {
 }
 
 .bio-text {
-    width: 80%;
+    width: 100%;
     font-size: var(--general-text);
     font-weight: 200;
     line-height: 1.575rem;
@@ -94,6 +95,36 @@ main {
 }
 
 /* ------/------Bio------/------ */
+
+/* -------------cardDrop------------- */
+
+.cardDrop {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    width: 50%;
+    margin-block: 100px;
+}
+
+.dropArea {
+    width: 200px;
+    height: 322.79px;
+}
+
+/* Add with js when dragging is detected 
+#dropRect:hover {
+    stroke: #2ea949;
+}
+ */
+.dropAreaCard {
+    display: none;
+    position: relative;
+    bottom: 353px;
+    left: 30px;
+    width: 200px;
+    border-radius: 20px;
+}
+/* ------/------cardDrop------/------ */
 
 /* -------------Responsive------------- */
 
@@ -121,4 +152,5 @@ main {
         width: 100%;
     }
 }
+
 /* ------/------Responsive------/------ */
