@@ -43,7 +43,7 @@ nav {
     gap: 100px;
 }
 
-a {
+nav a {
     color: #f2f2f2;
     text-decoration: none;
     display: flex;
@@ -51,6 +51,11 @@ a {
     justify-content: space-evenly;
     align-items: center;
     gap: 10px;
+}
+
+nav a:hover {
+    transition: ease 0.3ms;
+    color: #1aaac7;
 }
 
 a svg {
@@ -103,27 +108,21 @@ main {
 /* -------------cardDrop------------- */
 
 .cardDrop {
-    display: flex;
-    justify-content: center;
-    align-content: center;
     width: 50%;
     margin-block: 85px;
+    display: flex;
+    justify-content: center;
 }
 
 .dropAreaMark {
     width: 200px;
     height: 322.79px;
 }
-.dropAreaMark {
-    width: 200px;
-    height: 322.79px;
-}
 
-/* Add with js when dragging is detected 
-#dropRect:hover {
+.dropRect {
     stroke: #2ea949;
 }
- */
+
 .dropAreaCard {
     display: none;
     position: relative;
@@ -132,6 +131,11 @@ main {
     width: 200px;
     border-radius: 20px;
 }
+
+/* .draggedCard {
+    position: absolute;
+    margin: 0;
+} */
 
 /* ------/------cardDrop------/------ */
 
@@ -177,25 +181,43 @@ h2 {
     border-radius: 20px;
 }
 
-.webDev {
+.webDev.PreDrag {
     z-index: 2;
     margin-top: 100px;
     margin-left: 100px;
 }
 
-.backEnd {
+.backEnd.PreDrag {
     margin-top: -240px;
     margin-left: -50px;
     z-index: 1;
 }
 
-.frontEnd {
+.frontEnd.PreDrag {
     margin-top: -260px;
     margin-left: 160px;
     z-index: 0;
 }
 
+.PostDrag {
+    margin-top: -327px;
+    margin-left: 0px;
+}
+
 /* ------/------cardDeck------/------ */
+
+/* -------------modal------------- */
+
+.modal {
+    /* padding: 1rem; */
+    max-width: 50ch;
+}
+
+.modal::backdrop {
+    background: rgb(0 0 0 / 0.4);
+}
+
+/* ------/------modal------/------ */
 
 /* -------------Responsive------------- */
 
