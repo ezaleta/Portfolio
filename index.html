@@ -79,6 +79,7 @@
                 <div class="dropArea" id="dropArea">
                     <svg
                         id="dropAreaMark"
+                        class="dropAreaMark"
                         width="200"
                         height="322.79"
                         viewBox="0 0 204 327"
@@ -109,7 +110,7 @@
                     </h2>
                 </div>
                 <div class="cardDeck">
-                    <div class="card webDev" draggable="true">
+                    <div class="card webDev PreDrag draggable" draggable="true">
                         <svg
                             width="200"
                             height="323"
@@ -142,7 +143,7 @@
                         </svg>
                         <img src="./src/img/webdevcard.webp" alt="WebDev" />
                     </div>
-                    <div class="card backEnd" draggable="true">
+                    <div class="card backEnd PreDrag draggable" draggable="true">
                         <svg
                             width="200"
                             height="323"
@@ -188,7 +189,7 @@
                         </svg>
                         <img src="./src/img/backendcard.webp" alt="BackEnd" />
                     </div>
-                    <div class="card frontEnd" draggable="true">
+                    <div class="card frontEnd PreDrag draggable" draggable="true">
                         <svg
                             width="200"
                             height="323"
@@ -236,7 +237,14 @@
                     </div>
                 </div>
             </section>
+            <dialog class="weDev dialog" id="webDevModal">
+                <head>
+                    <h2>Web Development</h2>
+                    <button class="closeModal">Close</button>
+                </head>
+            </dialog>
         </main>
         <footer></footer>
+        <script src="./js/main.js"></script>
     </body>
 </html>
