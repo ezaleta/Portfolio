@@ -12,7 +12,7 @@ html {
 body {
     margin: 0;
     width: 100%;
-    height: 100%;
+    height: 90%;
     background-image: radial-gradient(circle at bottom left, #2d2d2d, #4c3062b0, #2d2d2d);
     font-family: "Montserrat", sans-serif;
     font-size: 16px;
@@ -21,6 +21,9 @@ body {
     align-items: center;
 }
 
+body::-webkit-scrollbar {
+    display: none;
+}
 /* -------------Navbar------------- */
 header {
     width: 100%;
@@ -64,6 +67,7 @@ main {
     height: 100%;
     display: flex;
     flex-direction: column;
+    flex-wrap: wrap;
 }
 
 /* ------/------Main------/------ */
@@ -83,7 +87,7 @@ main {
 }
 
 .bio-title h1 {
-    margin-block: 3rem;
+    margin-top: 5rem;
 }
 
 .bio-text {
@@ -103,10 +107,14 @@ main {
     justify-content: center;
     align-content: center;
     width: 50%;
-    margin-block: 100px;
+    margin-block: 85px;
 }
 
-.dropArea {
+.dropAreaMark {
+    width: 200px;
+    height: 322.79px;
+}
+.dropAreaMark {
     width: 200px;
     height: 322.79px;
 }
@@ -124,32 +132,135 @@ main {
     width: 200px;
     border-radius: 20px;
 }
+
 /* ------/------cardDrop------/------ */
+
+/* -------------cardDeck------------- */
+h2 {
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.cardDeckArea {
+    height: 100%;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.cardDeckArea h2 {
+    margin-top: 5rem;
+}
+
+.cardDeckTitle {
+    line-height: 3rem;
+    text-align: center;
+}
+
+.cardDeck {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.card img {
+    width: 200px;
+    border-radius: 20px;
+}
+
+.card svg {
+    position: absolute;
+    border-radius: 20px;
+}
+
+.webDev {
+    z-index: 2;
+    margin-top: 100px;
+    margin-left: 100px;
+}
+
+.backEnd {
+    margin-top: -240px;
+    margin-left: -50px;
+    z-index: 1;
+}
+
+.frontEnd {
+    margin-top: -260px;
+    margin-left: 160px;
+    z-index: 0;
+}
+
+/* ------/------cardDeck------/------ */
 
 /* -------------Responsive------------- */
 
 @media (max-width: 425px) {
-    main {
-        width: 100%;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-
     nav {
         justify-content: space-around;
         gap: 10px;
     }
 
+    main {
+        height: auto;
+        margin-inline: 30px;
+        display: block;
+    }
+
     .bio {
-        width: 90%;
+        width: 100%;
+        height: auto;
+        margin-block-end: 50px;
         display: flex;
         flex-direction: column;
         text-align: center;
     }
 
+    .cardDrop {
+        margin: auto;
+        margin-block-end: 50px;
+    }
     .bio-text {
         width: 100%;
+    }
+
+    .dropArea {
+        width: 100%;
+        height: 322.79px;
+    }
+
+    .cardDeckArea {
+        width: 100%;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        margin-block-end: 50px;
+    }
+
+    /*     .cardDeck {
+    } */
+    .webDev {
+        z-index: 2;
+        margin-top: 0px;
+        margin-left: 10px;
+    }
+
+    .backEnd {
+        margin-top: -240px;
+        margin-left: -120px;
+        z-index: 1;
+    }
+
+    .frontEnd {
+        margin-top: -260px;
+        margin-left: 120px;
+        z-index: 0;
     }
 }
 
