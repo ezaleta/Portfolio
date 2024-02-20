@@ -109,9 +109,11 @@ main {
 
 .cardDrop {
     width: 50%;
-    margin-block: 85px;
+    height: auto;
+    margin-block: 165px;
     display: flex;
     justify-content: center;
+    flex: auto;
 }
 
 .dropAreaMark {
@@ -131,11 +133,6 @@ main {
     width: 200px;
     border-radius: 20px;
 }
-
-/* .draggedCard {
-    position: absolute;
-    margin: 0;
-} */
 
 /* ------/------cardDrop------/------ */
 
@@ -199,7 +196,9 @@ h2 {
     z-index: 0;
 }
 
-.PostDrag {
+.PostDrag-1,
+.PostDrag-2,
+.PostDrag-3 {
     margin-top: -327px;
     margin-left: 0px;
 }
@@ -209,14 +208,51 @@ h2 {
 /* -------------modal------------- */
 
 .modal {
-    /* padding: 1rem; */
-    max-width: 50ch;
+    border: none;
+    background-image: url(../src/img/webDevModalBackground.webp);
+    width: 368px;
+    height: 618px;
+    border-radius: 20px;
 }
 
 .modal::backdrop {
-    background: rgb(0 0 0 / 0.4);
+    background: #161616d0;
 }
 
+.dialogHead {
+    width: 100%;
+    height: 120px;
+}
+
+.dialogHead h2 {
+    width: 50%;
+    text-align: center;
+}
+
+.close {
+    width: 50px;
+    height: 50px;
+    background-color: #c56600;
+    border: none;
+    border-radius: 50px;
+    font-size: x-large;
+}
+
+.dialogSection {
+    width: 100%;
+    height: auto;
+}
+
+.dialogSection h3 {
+    width: 100%;
+    text-align: center;
+    font-size: larger;
+}
+
+.dialogBody {
+    width: 100%;
+    height: auto;
+}
 /* ------/------modal------/------ */
 
 /* -------------Responsive------------- */
